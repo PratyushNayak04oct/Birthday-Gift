@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Sparkles, Heart, Star, Cake, Gift, PartyPopper, Zap } from 'lucide-react';
+import { Sparkles, Heart, Star, Cake, Gift, PartyPopper } from 'lucide-react';
 
 export default function BirthdayPage() {
   const [confetti, setConfetti] = useState([]);
   const [isCakeCut, setIsCakeCut] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
   const cakeRef = useRef(null);
 
   useEffect(() => {
@@ -36,6 +37,8 @@ export default function BirthdayPage() {
     if (!isCakeCut && e.buttons === 1) setIsCakeCut(true);
   };
 
+  const carouselImages = ['u.jpg', 'two.jpg', 'three.jpg', 'four.jpg', 'five.jpg', 'six.jpg', 'seven.jpg'];
+
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -59,6 +62,22 @@ export default function BirthdayPage() {
         @keyframes scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         @keyframes rotateIn { from { transform: rotate(-180deg) scale(0); opacity: 0; } to { transform: rotate(0) scale(1); opacity: 1; } }
+        @keyframes carousel-mobile { 
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-1400px); }
+        }
+        @keyframes carousel-desktop { 
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-3500px); }
+        }
+
+        @media (max-width: 640px) {
+          .carousel-mobile { animation: carousel-mobile 16s linear infinite !important; }
+        }
+
+        @media (min-width: 641px) {
+          .carousel-desktop { animation: carousel-desktop 24s linear infinite !important; }
+        }
 
         .animate-fall { animation: fall 4s linear infinite; }
         .animate-fadeIn { animation: fadeIn 1.5s ease-in; }
@@ -76,13 +95,18 @@ export default function BirthdayPage() {
         .animate-scroll-right { animation: scroll-right 20s linear infinite; }
         .animate-bounce-custom { animation: bounce 2s ease-in-out infinite; }
         .animate-rotateIn { animation: rotateIn 1s ease-out; }
+        .carousel-mobile { animation: carousel-mobile 8s linear infinite; }
+        .carousel-desktop { animation: carousel-desktop 12s linear infinite; }
 
         .drop-shadow-glow { filter: drop-shadow(0 0 8px currentColor) drop-shadow(0 0 16px currentColor); }
 
         .will-change-transform { will-change: transform; }
 
-        /* Backface visibility for 3D performance */
         * { backface-visibility: hidden; }
+
+        @media (max-width: 640px) {
+          .carousel-mobile { animation: carousel-mobile 6s linear infinite; }
+        }
       `}} />
       
       <div className="overflow-x-hidden bg-gradient-to-br from-blue-50 to-cyan-50">
@@ -218,7 +242,7 @@ export default function BirthdayPage() {
                     </div>
                   </div>
                   <p className="mt-8 text-lg sm:text-xl font-semibold text-blue-600 animate-pulse px-4">
-                    Swipe down or click to cut the cake!
+                    Swipe down or click to open the box !!!!!!!!
                   </p>
                 </div>
 
@@ -277,7 +301,7 @@ export default function BirthdayPage() {
         <section className="relative min-h-screen bg-gradient-to-br from-indigo-50 via-cyan-50 to-blue-50 py-12 sm:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-5xl sm:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 mb-12 animate-fadeIn">
-              Our Beautiful Moments
+              My Beautiful Moments
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-6xl mx-auto ">
@@ -337,6 +361,29 @@ export default function BirthdayPage() {
                   />
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IMAGE CAROUSEL SECTION */}
+        <section className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 py-8 overflow-hidden">
+          <div className="container mx-auto px-4 mb-8">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 animate-fadeIn">
+              Gallery of Love
+            </h2>
+          </div>
+          
+          <div className="w-full overflow-hidden">
+            <div className="carousel-mobile sm:carousel-desktop flex gap-2 sm:gap-4 px-2 sm:px-4 will-change-transform">
+              {[...carouselImages, ...carouselImages, ...carouselImages, ...carouselImages, ...carouselImages].map((img, idx) => (
+                <div key={idx} className="flex-shrink-0">
+                  <img
+                    src={img}
+                    alt={`Gallery ${(idx % carouselImages.length) + 1}`}
+                    className="h-36 w-36 sm:h-56 sm:w-56 lg:h-64 lg:w-64 object-cover rounded-lg sm:rounded-2xl shadow-lg border-2 sm:border-4 border-blue-300"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
