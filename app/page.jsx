@@ -88,8 +88,8 @@ export default function BirthdayPage() {
       <div className="overflow-x-hidden bg-gradient-to-br from-blue-50 to-cyan-50">
         {/* HERO SECTION */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-400 via-cyan-400 to-teal-400">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1789968/pexels-photo-1789968.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center blur-md" />
+          <div className="absolute inset-0 opacity-100">
+            <div className="absolute inset-0 bg-cover bg-center blur-[2px]" id = "hero-section" />
           </div>
 
           {confetti.map((item) => (
@@ -231,7 +231,7 @@ export default function BirthdayPage() {
 
                     <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl border-4 sm:border-6 border-blue-300 animate-rotateIn will-change-transform">
                       <img
-                        src="https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        src="main.jpg"
                         alt="Birthday"
                         className="w-full h-full object-cover"
                       />
@@ -280,11 +280,11 @@ export default function BirthdayPage() {
               Our Beautiful Moments
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-6xl mx-auto ">
               {[
-                'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800',
-                'https://images.pexels.com/photos/1024994/pexels-photo-1024994.jpeg?auto=compress&cs=tinysrgb&w=800',
-                'https://images.pexels.com/photos/1024995/pexels-photo-1024995.jpeg?auto=compress&cs=tinysrgb&w=800',
+                'aa.jpg',
+                't.jpg',
+                'u.jpg',
               ].map((src, i) => (
                 <div
                   key={i}
@@ -336,55 +336,6 @@ export default function BirthdayPage() {
                     style={{ animationDelay: `${i * 0.2}s` }}
                   />
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* VIDEO SECTION */}
-        <section className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 py-12 sm:py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-5xl sm:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-500 mb-12 animate-fadeIn">
-              Special Message For You
-            </h2>
-
-            <div className="max-w-3xl mx-auto">
-              <div className="relative animate-slideUp">
-                <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-3xl p-6 sm:p-8 shadow-2xl">
-                  <div className="relative bg-black rounded-2xl overflow-hidden shadow-inner" style={{ paddingBottom: '56.25%' }}>
-                    <video
-                      className="absolute inset-0 w-full h-full"
-                      controls
-                      poster="https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    >
-                      <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-
-                  <div className="flex justify-center gap-4 mt-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full shadow-lg animate-pulse will-change-transform" />
-                    <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full shadow-lg animate-pulse will-change-transform" style={{ animationDelay: '0.5s' }} />
-                  </div>
-                </div>
-
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full animate-pulse shadow-glow will-change-transform" />
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full animate-pulse shadow-glow will-change-transform" />
-              </div>
-
-              <div className="mt-8 text-center">
-                <p className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 font-semibold animate-pulse">
-                  Made with love, just for you!
-                </p>
-                <div className="flex flex-wrap justify-center gap-2 mt-4">
-                  {[...Array(7)].map((_, i) => (
-                    <Heart
-                      key={i}
-                      className="w-6 h-6 text-pink-500 fill-pink-500 animate-heartbeat will-change-transform"
-                      style={{ animationDelay: `${i * 0.15}s` }}
-                    />
-                  ))}
-                </div>
               </div>
             </div>
           </div>
