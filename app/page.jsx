@@ -265,7 +265,10 @@ export default function BirthdayPage() {
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic">
                         "On this special day, I want you to know how much you mean to me.
                         You bring sunshine to my cloudiest days and make every moment we spend together magical.
-                        Here's to celebrating you today and always! I love you more than words can say."
+                        Here's to celebrating you today and always! I love you more than words can ever say."
+                      </p>
+                      <p className="text-base sm:text-lg text-gray-700 leading-relaxed italic">
+                        “Meeting you was fate, falling for you was destiny, and loving you is my life’s most beautiful journey. On your birthday, I wish I could wrap all my love into a single kiss and gift it to you — because you deserve nothing less than the universe itself.”
                       </p>
                     </div>
 
@@ -335,15 +338,28 @@ export default function BirthdayPage() {
 
                   <div className="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
                     <p>
-                      My dearest love, on this incredibly special day, I want to take a moment to tell you just how much you mean to me.
-                      From the first moment we met, you've brought an incredible amount of joy, laughter, and love into my life.
+                      On this incredibly special day — your birthday — I want to pour my heart onto this page and tell you how truly precious you are to me. From the moment our paths crossed, my life has never been the same. You walked in so effortlessly, and suddenly, everything felt brighter, softer, and more beautiful.
                     </p>
                     <p>
-                      Every day with you feels like a celebration. Your smile lights up my world, your laugh is my favorite sound,
-                      and your presence makes everything better.
+                      Every day with you feels like a celebration of love itself. Your smile outshines the sun; your laughter is the sweetest melody I’ve ever heard. When you look at me, the whole world fades, and all I see is home — safe, warm, and full of love.
                     </p>
                     <p>
-                      You inspire me to be a better person. Your kindness, strength, and beautiful heart remind me every day how lucky I am.
+                      You are my constant source of inspiration. Your strength amazes me, your kindness humbles me, and your heart — oh, your beautiful heart — makes me fall in love with you all over again, every single day. You’ve shown me what true love really means: not just the butterflies and the excitement, but the quiet comfort, the unwavering support, and the unspoken understanding that only souls deeply connected can share.
+                    </p>
+                    <p>
+                      I love the way you make even the simplest moments unforgettable — how holding your hand feels like the most natural thing in the world, how your voice can calm my storms, and how your love fills every empty space within me. You’re not just a part of my life; you are my life, my reason, my forever.
+                    </p>
+                    <p>
+                      On your birthday, I want to thank you — for loving me, for choosing me, for being you. I want to promise that no matter where life takes us, I’ll always stand beside you — celebrating your victories, holding you through your storms, and cherishing you endlessly.
+                    </p>
+                    <p>
+                      Happy Birthday, my love. You are my heart’s truest wish, my greatest blessing, and my forever home. I love you more deeply than words will ever be able to express.
+                    </p>
+                    <p>
+                      Always and forever yours,
+                    </p>
+                    <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 text-lg">
+                      Pratyush Nayak ❤️
                     </p>
                     <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 text-lg">
                       Happy Birthday, my love! I love you more than words could ever express!
