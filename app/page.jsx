@@ -417,10 +417,19 @@ export default function BirthdayPage() {
                   You are my greatest blessing
                 </p>
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
-                  With every passing day, I fall more in love with you. Your presence in my life has changed everything for the better.
-                  Thank you for being the incredible person you are, for loving me unconditionally, and for making every moment special.
-                  Today we celebrate not just another year, but another year of amazing memories we've created together.
+                  With every passing day, I fall more deeply in love with you. You’ve brought light, warmth, and meaning into my life in ways I never imagined possible. Your love has changed me, healed me, and made me a better person.
                 </p>
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                  Thank you for being the amazing soul that you are—for loving me unconditionally, for standing by me through every high and low, and for filling my life with laughter and peace. Every moment spent with you feels like a beautiful memory in the making, and I cherish each one with all my heart.
+                </p>
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                  I know I’ve made mistakes along the way, and I’m truly sorry for every time I’ve hurt you, knowingly or unknowingly. Please forgive me for my shortcomings—for the moments I failed to understand, for the times I didn’t express my love enough. You deserve only the best version of me, and I promise to keep becoming that for you.
+                </p>
+
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                  Today isn’t just about celebrating your birthday—it’s about celebrating the love we share, the memories we’ve created, and the beautiful journey that still lies ahead. You are my heart, my peace, and my forever, and I love you more deeply than words could ever describe.
+                </p>
+
                 <p className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                   🎂 Happy Birthday to My Love! 🎂
                 </p>
